@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karthikeya Telapalli's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1>Karthikeya Telapalli</h1>
+            <p>Computer Science Student at University of South Florida</p>
+        </div>
+        <nav>
+            <ul id="navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a hardworking and motivated computer science student at the University of South Florida. I am passionate about data analysis, problem-solving, and using technology to drive meaningful outcomes.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <p>Python</p>
+                <progress value="80" max="100"></progress>
+            </div>
+            <div class="skill">
+                <p>C++</p>
+                <progress value="70" max="100"></progress>
+            </div>
+            <!-- Repeat above div for each skill -->
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>Research Volunteer at USF</h3>
+                <p>Developed and optimized code for the GPUMD project...</p>
+            </div>
+            <!-- Repeat above div for each experience -->
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Stock Price Prediction Model</h3>
+                <p>Developed a robust regression model to predict stock prices...</p>
+            </div>
+            <!-- Repeat above div for each project -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
