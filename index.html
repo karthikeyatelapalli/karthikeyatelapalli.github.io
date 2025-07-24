@@ -1,77 +1,258 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Karthikeya Telapalli's Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="profile">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h1>Karthikeya Telapalli</h1>
-            <p>    Computer Science Student at University of South Florida</p>
-        </div>
-        <nav>
-            <ul id="navigation">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a hardworking and motivated computer science student at the University of South Florida. I am passionate about data analysis, problem-solving, and using technology to drive meaningful outcomes.</p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skill">
-                <p>Python</p>
-                <progress value="80" max="100"></progress>
-            </div>
-            <div class="skill">
-                <p>C++</p>
-                <progress value="70" max="100"></progress>
-            </div>
-            <!-- Repeat above div for each skill -->
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience">
-                <h3>Research Volunteer at USF</h3>
-                <p>Developed and optimized code for the GPUMD project...</p>
-            </div>
-            <!-- Repeat above div for each experience -->
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Stock Price Prediction Model</h3>
-                <p>Developed a robust regression model to predict stock prices...</p>
-            </div>
-            <!-- Repeat above div for each project -->
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="submit_form.php">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index c4d859e0fac9e6975befe5df4bde9355a154ec8a..0ea33cd5932377bceb38d96d0764171cafc1a702 100644
+--- a/index.html
++++ b/index.html
+@@ -1,77 +1,176 @@
+-<!DOCTYPE html>
+-<html>
+-<head>
+-    <title>Karthikeya Telapalli's Portfolio</title>
+-    <link rel="stylesheet" type="text/css" href="styles.css">
+-</head>
+-<body>
+-    <header>
+-        <div class="profile">
+-            <img src="profile.jpg" alt="Profile Picture">
+-            <h1>Karthikeya Telapalli</h1>
+-            <p>    Computer Science Student at University of South Florida</p>
+-        </div>
+-        <nav>
+-            <ul id="navigation">
+-                <li><a href="#about">About</a></li>
+-                <li><a href="#skills">Skills</a></li>
+-                <li><a href="#experience">Experience</a></li>
+-                <li><a href="#projects">Projects</a></li>
+-                <li><a href="#contact">Contact</a></li>
+-            </ul>
+-        </nav>
+-    </header>
+-
+-    <main>
+-        <section id="about">
+-            <h2>About Me</h2>
+-            <p>I am a hardworking and motivated computer science student at the University of South Florida. I am passionate about data analysis, problem-solving, and using technology to drive meaningful outcomes.</p>
+-        </section>
+-
+-        <section id="skills">
+-            <h2>Skills</h2>
+-            <div class="skill">
+-                <p>Python</p>
+-                <progress value="80" max="100"></progress>
+-            </div>
+-            <div class="skill">
+-                <p>C++</p>
+-                <progress value="70" max="100"></progress>
+-            </div>
+-            <!-- Repeat above div for each skill -->
+-        </section>
+-
+-        <section id="experience">
+-            <h2>Experience</h2>
+-            <div class="experience">
+-                <h3>Research Volunteer at USF</h3>
+-                <p>Developed and optimized code for the GPUMD project...</p>
+-            </div>
+-            <!-- Repeat above div for each experience -->
+-        </section>
+-
+-        <section id="projects">
+-            <h2>Projects</h2>
+-            <div class="project">
+-                <h3>Stock Price Prediction Model</h3>
+-                <p>Developed a robust regression model to predict stock prices...</p>
+-            </div>
+-            <!-- Repeat above div for each project -->
+-        </section>
+-
+-        <section id="contact">
+-            <h2>Contact Me</h2>
+-            <form action="submit_form.php">
+-                <label for="name">Name:</label>
+-                <input type="text" id="name" name="name" required>
+-                <label for="email">Email:</label>
+-                <input type="email" id="email" name="email" required>
+-                <label for="message">Message:</label>
+-                <textarea id="message" name="message" required></textarea>
+-                <input type="submit" value="Submit">
+-            </form>
+-        </section>
+-    </main>
+-    <script src="scripts.js"></script>
+-</body>
+-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Karthikeya Telapalli</title>
++    <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++    <header class="hero">
++        <div class="container">
++            <img class="profile-photo" src="profile.jpg" alt="Karthikeya Telapalli">
++            <h1>Karthikeya Telapalli</h1>
++            <p class="subtitle">BS in Quantitative Economics and Econometrics &amp; Computer Science</p>
++            <nav>
++                <ul>
++                    <li><a href="#education">Education</a></li>
++                    <li><a href="#experience">Experience</a></li>
++                    <li><a href="#leadership">Leadership</a></li>
++                    <li><a href="#projects">Projects</a></li>
++                    <li><a href="#skills">Skills</a></li>
++                    <li><a href="#contact">Contact</a></li>
++                </ul>
++            </nav>
++        </div>
++    </header>
++
++    <main class="container">
++        <section id="education">
++            <h2>Education</h2>
++            <h3>University of South Florida</h3>
++            <p>BS in Quantitative Economics and Econometrics &amp; Computer Science</p>
++            <ul>
++                <li>GPA: 3.84 (Senior Year)</li>
++                <li>Recipient of USF Green and Gold Directors award ($24000)</li>
++            </ul>
++        </section>
++
++        <section id="experience">
++            <h2>Work Experience</h2>
++            <article>
++                <h3>Teaching Assistant (Pre-Calculus), University of South Florida — Tampa, FL (07/2024 – current)</h3>
++                <ul>
++                    <li>Guided students through challenging Pre-Calculus concepts and facilitated team-based activities.</li>
++                    <li>Assisted professors by grading coursework and managing classroom needs.</li>
++                    <li>Fostered collaboration and engagement through structured support.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Learning Teams Leader (General Physics 1), University of South Florida — Tampa, FL (04/2023 – 05/2025)</h3>
++                <ul>
++                    <li>Mentored first-year engineering students and facilitated weekly problem-solving sessions.</li>
++                    <li>Organized study sessions to reinforce key concepts.</li>
++                    <li>Provided personalized guidance through one-on-one meetings.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Research Assistant, University of South Florida — Tampa, FL (10/2022 – 05/2024)</h3>
++                <ul>
++                    <li>Developed a neural network algorithm using CNNs to analyze Gut microbiome data with 90% accuracy.</li>
++                    <li>Led development of a 3D Molecular Dynamics simulator with CUDA and Verlet integration.</li>
++                    <li>Integrated simulations with Apache Spark and JCuda as a Spring Boot web service.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Teaching Assistant (Calculus I), University of South Florida — Tampa, FL (09/2022 – 05/2023)</h3>
++                <ul>
++                    <li>Graded assignments and tests for over 700 students and proctored examinations.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Research Volunteer, University of South Florida — Tampa, FL (08/2022 – 03/2023)</h3>
++                <ul>
++                    <li>Developed a WebAR application for exposure therapy targeting Arachnophobia.</li>
++                    <li>Integrated clinical requirements for effective simulation of phobia-inducing stimuli.</li>
++                    <li>Managed proof-of-concept stage, refining functionality for future development.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Research Volunteer, Undergraduate Research Society — Tampa, FL (12/2022 – 02/2023)</h3>
++                <ul>
++                    <li>Analyzed 1,000 articles on BRCA1/BRCA2 mutations, focusing on 100+ key articles.</li>
++                    <li>Collected and analyzed data to identify patterns and insights.</li>
++                    <li>Presented findings, effectively conveying scientific information.</li>
++                </ul>
++            </article>
++        </section>
++
++        <section id="leadership">
++            <h2>Leadership Experience</h2>
++            <article>
++                <h3>Founder &amp; CEO, Slatewing — Tampa, FL (10/2023 – 05/2024)</h3>
++                <ul>
++                    <li>Conceptualized an insurance platform using blockchain for automated claims and fraud prevention.</li>
++                    <li>Pioneered a peer-to-peer insurance model for decentralized risk pooling.</li>
++                    <li>Led a multidisciplinary team, developed business plan, and pitched to investors.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Co-Founder &amp; CFO, Anirudh International LLC — Tampa, FL (02/2024 – 12/2024)</h3>
++                <ul>
++                    <li>Directed financial and operational strategies for a startup with a $3,000 budget.</li>
++                    <li>Integrated subsidiary projects and managed financial closures.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Co-Founder &amp; CEO, Digisolutions Private Limited — Tampa, FL (03/2024 – 12/2024)</h3>
++                <ul>
++                    <li>Launched Musical Miles analyzing ethnic diversity in songs, reaching 100+ users.</li>
++                    <li>Directed partnerships and oversaw three additional projects.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Director, Open Understanding Foundation — Tampa, FL (06/2024 – 12/2024)</h3>
++                <ul>
++                    <li>Designed and implemented student outreach programs on university admissions and strategies.</li>
++                </ul>
++            </article>
++        </section>
++
++        <section id="projects">
++            <h2>Projects</h2>
++            <article>
++                <h3>Financial Analysis and Valuation of Starbucks Corporation (May 2024)</h3>
++                <ul>
++                    <li>Developed an equity research model analyzing revenue growth and efficiency over five years.</li>
++                    <li>Valued the company using DCF and CCA methods with an intrinsic value of $84 per share.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Global Economic Impact Analysis of Renewable Energy Adoption (Dec 2023)</h3>
++                <ul>
++                    <li>Analyzed global economic effects of renewable energy adoption across sectors.</li>
++                    <li>Developed a Panel Data Regression Model to evaluate GDP growth impacts.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>Weekly Price Prediction Tool (Oct 2022)</h3>
++                <ul>
++                    <li>Integrated random forests with neural networks achieving 75% prediction accuracy.</li>
++                    <li>Conducted rigorous weekly validation and stress tests.</li>
++                </ul>
++            </article>
++            <article>
++                <h3>LLM-Based Sentiment Analysis &amp; Tree-of-Thought Reasoning (Dec 2024)</h3>
++                <ul>
++                    <li>Developed sentiment models using large language models with chain-of-thought prompting.</li>
++                    <li>Implemented tree-of-thought reasoning to improve decision-making.</li>
++                    <li>Benchmarked LLMs against traditional models for accuracy.</li>
++                </ul>
++            </article>
++        </section>
++
++        <section id="skills">
++            <h2>Skills &amp; Clubs</h2>
++            <p><strong>Technical:</strong> Python, R, C, C++, SQL, TensorFlow, STATA, Excel (Advanced), Data Visualization (Power BI, Tableau), MS Office, Economic Analysis, Machine Learning, Algorithms, Risc-V, Verilog.</p>
++            <p><strong>Statistics &amp; Economics:</strong> Financial Modeling, Forecasting, DCF Valuation, Statistical Modeling, Investment management.</p>
++            <p><strong>Soft Skills:</strong> Leadership, Strategic Thinking, Collaboration, Analytical Problem Solving, Communication, Mentorship, Cultural Sensitivity, Conflict Management, Innovation, Emotional Intelligence, Critical Thinking.</p>
++            <p><strong>Clubs:</strong> Brain-Computer Interface Club, SASE, DSC, Investment Club, SHPE.</p>
++            <p><strong>Certifications:</strong> Goldman Sachs – Risk Virtual Experience (Jun 2025), Citi – Personal Banking Virtual Experience (Jul 2025), Bloomberg Market Concepts (2025), Power BI Essential Training (Jan 2025).</p>
++        </section>
++
++        <section id="contact">
++            <h2>Contact</h2>
++            <p>Tampa, FL | 813-894-2873 | <a href="mailto:karthikeyatelapalli@usf.edu">karthikeyatelapalli@usf.edu</a></p>
++            <p><a href="https://www.linkedin.com/in/">LinkedIn</a> | Willing to Relocate</p>
++        </section>
++    </main>
++
++    <footer class="container">
++        <p>&copy; 2025 Karthikeya Telapalli</p>
++    </footer>
++
++    <script src="scripts.js"></script>
++</body>
++</html>
