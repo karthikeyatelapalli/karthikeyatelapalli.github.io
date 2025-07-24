@@ -1,141 +1,100 @@
-diff --git a/styles.css b/styles.css
-index 021666768d008689abbeb4049a7d74a6a664c573..d138e97a314b0ccfa94db710c5f48a9d19e98ff0 100644
---- a/styles.css
-+++ b/styles.css
-@@ -1,63 +1,73 @@
--body {
--    font-family: Arial, sans-serif;
--    margin: 0;
--    padding: 0;
--    box-sizing: border-box;
--}
--
--header {
--    background-color: #f8f9fa;
--    padding: 20px;
--    text-align: center;
--}
--
--.profile img {
--    width: 150px;
--    height: 150px;
--    border-radius: 50%;
--}
--
--nav ul {
--    list-style-type: none;
--    padding: 0;
--}
--
--nav ul li {
--    display: inline;
--    margin: 0 10px;
--}
--
--nav ul li a {
--    text-decoration: none;
--    color: #343a40;
--}
--
--section {
--    margin: 20px;
--}
--
--h2 {
--    color: #343a40;
--}
--
--.skill progress {
--    width: 100%;
--}
--
--form input, form textarea {
--    width: 100%;
--    margin-bottom: 10px;
--    padding: 10px;
--    box-sizing: border-box;
--}
--
--form input[type="submit"] {
--    background-color: #007bff;
--    color: white;
--    border: none;
--    cursor: pointer;
--}
--
--form input[type="submit"]:hover {
--    background-color: #0056b3;
--}
-+body {
-+    font-family: Arial, Helvetica, sans-serif;
-+    margin: 0;
-+    padding: 0;
-+    background-color: #f5f5f5;
-+    color: #333;
-+}
-+
-+.container {
-+    max-width: 900px;
-+    margin: 0 auto;
-+    padding: 20px;
-+}
-+
-+header.hero {
-+    background: linear-gradient(135deg, #4e9af1, #70c1b3);
-+    color: white;
-+    text-align: center;
-+    padding: 40px 0;
-+}
-+
-+.profile-photo {
-+    width: 140px;
-+    height: 140px;
-+    border-radius: 50%;
-+    object-fit: cover;
-+    margin-bottom: 10px;
-+}
-+
-+.subtitle {
-+    margin-top: 0;
-+}
-+
-+nav ul {
-+    list-style: none;
-+    padding: 0;
-+    margin: 20px 0 0;
-+}
-+
-+nav ul li {
-+    display: inline-block;
-+    margin: 0 10px;
-+}
-+
-+nav ul li a {
-+    color: white;
-+    text-decoration: none;
-+    font-weight: bold;
-+}
-+
-+nav ul li a:hover {
-+    text-decoration: underline;
-+}
-+
-+section {
-+    margin-bottom: 40px;
-+}
-+
-+h2 {
-+    border-bottom: 2px solid #4e9af1;
-+    padding-bottom: 5px;
-+}
-+
-+article {
-+    margin-bottom: 20px;
-+}
-+
-+footer {
-+    text-align: center;
-+    padding: 20px;
-+    font-size: 0.9em;
-+    color: #666;
-+}
+/* ---------- 1. RESET & VARIABLES ---------- */
+:root{
+  --clr-primary: #4e9af1;
+  --clr-primary-dark:#3179d6;
+  --clr-accent:  #70c1b3;
+  --clr-bg:      #f5f5f5;
+  --clr-text:    #333;
+  --ff-base:     'Inter', Arial, sans-serif;
+  --radius:      8px;
+  --transition:  0.3s ease-in-out;
+}
+
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+
+/* ---------- 2. GLOBAL ---------- */
+body{
+  font-family:var(--ff-base);
+  background:var(--clr-bg);
+  color:var(--clr-text);
+  line-height:1.6;
+}
+.container{max-width:900px;margin:0 auto;padding:20px}
+img{max-width:100%;display:block}
+
+/* ---------- 3. HERO & NAV ---------- */
+header.hero{
+  background:linear-gradient(135deg,var(--clr-primary),var(--clr-accent));
+  color:#fff;
+  padding:3rem 0;
+  position:relative;
+}
+.hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center}
+.profile-photo{
+  width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:1rem
+}
+nav ul{list-style:none;margin-top:1.5rem}
+nav ul li{display:inline-block;margin:0 .75rem}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline}
+
+/* ---------- Mobile Drawer ---------- */
+.nav-toggle{
+  display:none;flex-direction:column;gap:4px;border:none;background:transparent;
+  position:absolute;top:1.5rem;right:1.5rem;cursor:pointer
+}
+.nav-toggle span{width:24px;height:3px;background:#fff;transition:var(--transition)}
+@media(max-width:768px){
+  .nav-toggle{display:flex}
+  nav ul{
+    display:none;flex-direction:column;gap:1.25rem;
+    position:fixed;top:0;right:0;width:60vw;height:100vh;
+    background:rgba(0,0,0,.9);padding-top:6rem;text-align:left
+  }
+  nav.open ul{display:flex}
+}
+
+/* ---------- 4. SECTION HEADINGS ---------- */
+section{margin:3rem 0}
+h2{margin-bottom:.75rem;border-bottom:2px solid var(--clr-primary);padding-bottom:4px}
+h3{margin:.5rem 0}
+
+/* ---------- 5. TIMELINE ---------- */
+.timeline{position:relative;margin-left:1rem}
+.timeline:before{
+  content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--clr-primary)
+}
+.timeline-item{position:relative;padding-left:2rem;margin-bottom:2rem}
+.timeline-item:before{
+  content:'';position:absolute;left:-2px;top:.3rem;width:10px;height:10px;
+  border-radius:50%;background:var(--clr-primary)
+}
+
+/* ---------- 6. BADGE & BUTTON ---------- */
+.badge{
+  background:var(--clr-accent);color:#fff;border-radius:9999px;
+  padding:.15rem .6rem;font-size:.7rem;font-weight:600;margin-left:.3rem
+}
+.btn{
+  display:inline-block;padding:.75rem 1.5rem;border:none;border-radius:var(--radius);
+  background:var(--clr-primary);color:#fff;text-decoration:none;font-weight:600;
+  transition:var(--transition)
+}
+.btn:hover{background:var(--clr-primary-dark)}
+
+/* ---------- 7. SKILL BARS ---------- */
+.skill-bar{
+  position:relative;height:26px;background:#e0e0e0;
+  border-radius:var(--radius);margin-bottom:1rem;overflow:hidden
+}
+.skill-bar:before{
+  content:attr(data-skill);position:absolute;left:1rem;top:0;bottom:0;
+  display:flex;align-items:center;font-weight:600;z-index:2
+}
+.skill-fill{
+  position:absolute;left:0;top:0;bottom:0;width:0%;
+  background:var(--clr-primary);transition:width 1.5s ease-out
+}
+
+/* ---------- 8. FOOTER ---------- */
+footer{font-size:.9rem;text-align:center;padding:2rem 0;color:#666}
